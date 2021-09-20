@@ -1,0 +1,28 @@
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var firstUniqChar = function(s) {
+    //Loop through each character in the string once
+    //Save the letters as key in the hashmap and the value as count of keys
+    const map = new Map();
+       
+    for(let i = 0 ; i < s.length; i++){
+        //If the hasmap does not have the characrer, add one to the value
+        if(!map.has(s.charAt(i))){
+            map.set(s.charAt(i), 1);
+        }
+        //If it does have the character previously , then get the current value and add one.
+        else{
+             map.set(s.charAt(i) , map.get(s.charAt(i)) + 1);
+        }
+       
+    }
+   
+    for(let i = 0 ; i < s.length ; i++){
+        if(map.get(s.charAt(i)) == 1){
+            return i;
+        }
+    }
+  return -1;
+};
