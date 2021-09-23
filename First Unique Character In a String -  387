@@ -8,7 +8,7 @@ var firstUniqChar = function(s) {
     const map = new Map();
        
     for(let i = 0 ; i < s.length; i++){
-        //If the hasmap does not have the characrer, add one to the value
+        //If the hashmap does not have the characrer, add one to the value
         if(!map.has(s.charAt(i))){
             map.set(s.charAt(i), 1);
         }
