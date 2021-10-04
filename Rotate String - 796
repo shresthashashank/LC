@@ -1,8 +1,4 @@
-/**
- * @param {string} s
- * @param {string} goal
- * @return {boolean}
- */
+
 var rotateString = function(s, goal) {
     // console.log(s.substring(0,s.length) + s.substring(0,1) );
 
